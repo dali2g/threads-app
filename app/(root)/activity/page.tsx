@@ -22,7 +22,7 @@ async function Page() {
         {activity.length > 0 ? (
           <>
             {activity.map((activity) => (
-              <Link key={activity._id} href={`/thread/${activity.parentId}`}>
+              <Link key={activity._id} href={`/thread/${activity._id}`}>
                 <article className='activity-card'>
                   <Image
                     src={activity.author.image}
