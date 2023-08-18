@@ -62,10 +62,10 @@ export async function fetchPosts(pageNumber=1,pageSize=20){
         return {posts,isNext}
 }
 
-export async function fetchThreadById(id:string) {
+export async function fetchThreadById(threadId:string) {
     connectDB()
     try {
-        const thread = await Thread.findById(id)
+        const thread = await Thread.findById(threadId)
         .populate({
             path:'author',
             model:User,
